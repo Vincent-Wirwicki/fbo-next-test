@@ -6,7 +6,6 @@ import {
   RGBAFormat,
   FloatType,
   DataTexture,
-  Vector2,
 } from "three";
 import { extend, ThreeElement } from "@react-three/fiber";
 import PortalMesh from "../../../fbo-utils/PortalMesh";
@@ -29,10 +28,7 @@ const SceneFBO: FC<FBOType> = ({ size, particles, pos, offset }) => {
   // FBO SCENE -----------------------------
   const scene = useMemo(() => new Scene(), []);
   const cam = useMemo(() => new OrthographicCamera(-1, 1, 1, -1, -1, 1), []);
-  const resolution = useMemo(
-    () => new Vector2(window.innerWidth, window.innerHeight),
-    []
-  );
+
   //SHADER REF-------------------------------
   const simRef = useRef<ShaderMaterial>(null!);
   const renderRef = useRef<ShaderMaterial>(null!);
@@ -56,7 +52,7 @@ const SceneFBO: FC<FBOType> = ({ size, particles, pos, offset }) => {
   return (
     <>
       <PortalMesh scene={scene}>
-        <simMatCurly ref={simRef} args={[dataTex, offsetTex, resolution]} />
+        <simMatCurly ref={simRef} args={[dataTex, offsetTex]} />
       </PortalMesh>
       <Particles renderMatRef={renderRef} particles={particles} />
     </>
