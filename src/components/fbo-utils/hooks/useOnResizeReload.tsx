@@ -1,3 +1,4 @@
+"use client";
 import { useEffect } from "react";
 
 export function useWindowResizeReload(delay = 50) {
