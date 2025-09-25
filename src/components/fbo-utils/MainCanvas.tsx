@@ -1,7 +1,7 @@
 "use client";
 import { Stats } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import { ReactNode, useEffect, useState } from "react";
+import { ReactNode } from "react";
 import { Vector3 } from "three";
 
 const MainCanvas = ({
