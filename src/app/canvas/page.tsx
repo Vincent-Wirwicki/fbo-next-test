@@ -16,7 +16,6 @@ const Page = () => {
   });
   return (
     <>
-      <nav></nav>
       {/* <div className="fixed top-0 left-0 mix-blend-exclusion bg-white w-screen h-screen z-10"></div> */}
       <MainCanvas cam={[0, -3, 60]} dpr={2}>
         <SceneFBO
