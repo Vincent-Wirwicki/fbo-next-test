@@ -3,7 +3,7 @@ import { useEffect } from "react";
 
 export function useWindowResizeReload(delay = 50) {
   useEffect(() => {
-    let timeoutId: number;
+    let timeoutId: ReturnType<typeof setTimeout>;
 
     const handleResize = () => {
       // Clear the existing timeout

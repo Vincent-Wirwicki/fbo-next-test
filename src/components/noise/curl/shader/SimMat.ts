@@ -1,7 +1,7 @@
-import { DataTexture, ShaderMaterial, Vector2 } from "three";
+import { DataTexture, ShaderMaterial } from "three";
 
 export default class SimMatCurly extends ShaderMaterial {
-  constructor(pos: DataTexture, offset: DataTexture, resolution: Vector2) {
+  constructor(pos: DataTexture, offset: DataTexture) {
     super({
       uniforms: {
         uPositions: { value: pos },
